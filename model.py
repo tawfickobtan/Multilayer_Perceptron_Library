@@ -20,7 +20,7 @@ class model:
         return output
         
     def back(self, input, expectedOutput):
-        derivativeSoFar = self.loss(model.run(input), expectedOutput)
+        derivativeSoFar = self.loss(self.run(input), expectedOutput)
 
         for layer in self.layers[::-1]:
             derivativeSoFar = layer.back(derivativeSoFar)

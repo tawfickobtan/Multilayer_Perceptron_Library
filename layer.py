@@ -18,7 +18,6 @@ class layer:
         self.lastInput = None
         self.lastOutput = None
         self.updateWeights = np.zeros(self.weights.shape)
-        print(self.update)
         
     
     def run(self, input):
@@ -56,10 +55,12 @@ class layer:
             derivativeSoFar *= self.activation.derivative(self.lastOutput)
         self.updateWeights += self.lastInput.T @ derivativeSoFar
 
+        if self.bias:
+            return derivativeSoFar @ self.weights.T[:-1,:]
         return derivativeSoFar @ self.weights.T
 
     def update(self):
-        self.weights -= self.alpha * self.update
+        self.weights -= self.alpha * self.updateWeights
         self.updateWeights = np.zeros(self.weights.shape)
         
 
