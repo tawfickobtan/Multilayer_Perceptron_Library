@@ -1,10 +1,7 @@
 import numpy as np
 
-class ReLU:
-    def __call__(self, preActivatedInput):
-        return np.where(preActivatedInput<= 0, 0, preActivatedInput)
+class MSE:
+    def __call__(self, modelOutput, expected):
+        return 2 * (modelOutput - expected)
     
-temp = ReLU()
-print(temp(np.array([[1, 2, 3], 
-           [-1, 2, -5], 
-           [5, 3, -9]])))
+
