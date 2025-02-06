@@ -7,7 +7,7 @@ class model:
         self.layers = []
         self.loss = loss
         for layer in layers:
-            self.append(layer)
+            self.layers.append(layer)
     
     def printLayers(self):
         for layer in self.layers:
