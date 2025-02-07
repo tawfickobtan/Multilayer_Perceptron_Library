@@ -21,13 +21,13 @@ class layer:
         
     
     def run(self, input):
-        batchSize, features = 1, 1
-        if len(input.shape) == 1:
+        if input.ndim == 1:
             print("Single input")
-            features = input.shape[0]
+            input = input.reshape(1, -1)
         else:
             print("Batch")
-            batchSize, features = input.shape
+        
+        batchSize, features = input.shape
         if features != self.inputs:
             print("Feature count incorrect")
             print("correct:", self.inputs)
