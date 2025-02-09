@@ -43,38 +43,7 @@ git clone https://github.com/yourusername/neural-network-library.git
 cd neural-network-library
 ```
 
-### 2 Example Usage:
-
-Here is a simple example of how to use the library to train a neural network:
-
-```python
-import numpy as np
-from neural_network import Model, Layer
-from activationFuncs import ReLU, Sigmoid
-from lossFuncs import MSE
-
-# Define the network architecture
-layer1 = Layer(inputs=2, outputs=3, wantBias=True, activationFunc=ReLU())
-layer2 = Layer(inputs=3, outputs=1, wantBias=True, activationFunc=Sigmoid())
-
-# Initialize the model
-model = Model(layer1, layer2, loss=MSE())
-
-# Define some sample data (XOR problem)
-X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-y = np.array([[0], [1], [1], [0]])
-
-# Train the model
-for epoch in range(10000):
-    output = model.run(X)
-    model.back(X, y)
-
-# Test the model
-predictions = model.run(X)
-print(predictions)
-```
-
-## 3. Training the model:
+## 2. Training the model:
 
 - Define the layers by specifying the number of inputs, outputs, and activation functions.
 - Use the Model class to encapsulate the layers and the loss function.
