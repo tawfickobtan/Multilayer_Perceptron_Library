@@ -34,6 +34,8 @@ class Softmax:
         # Since I use Cross Entropy Loss, MSE Already Returns Desired Derivative
         if x.ndim == 1:
             x.reshape(1, -1)
-        return x / 2
+        
+        return np.ones(x.shape)
+    
 
 
