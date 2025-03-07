@@ -11,7 +11,7 @@ class layer:
         self.alpha = alpha
 
         if wantBias:
-            self.weights = np.vstack((self.weights, np.ones((1, outputs))))
+            self.weights = np.vstack((self.weights, np.zeros((1, outputs))))
         print("Initial weights:")
         print(self.weights)
 
