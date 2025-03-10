@@ -1,8 +1,8 @@
-# Neural Network Library
+# Multilayer Perceptron
 
 ## Overview 🚀
 
-This **Neural Network Library** was built entirely from scratch and represents my first serious project in machine learning. The goal of this project was to implement the core components of a neural network, including forward propagation, backpropagation, weight updates, and activation functions, without relying on any pre-existing machine learning libraries.
+This **multilayer perceptron Library** was built entirely from scratch and represents my first serious project in machine learning. The goal of this project was to implement the core components of a neural network, including forward propagation, backpropagation, weight updates, and activation functions, without relying on any pre-existing machine learning libraries.
 
 This project was both challenging and highly rewarding, offering valuable insights into the mathematics and algorithms behind neural networks. It significantly enhanced my understanding of **multivariate calculus**, **linear algebra**, and **backpropagation**. 💡
 
