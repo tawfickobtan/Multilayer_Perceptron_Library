@@ -1,4 +1,4 @@
-# Multilayer Perceptron
+# Multilayer Perceptron Library
 
 ## Overview 🚀
 
